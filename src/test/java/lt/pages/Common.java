@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import utils.Driver;
 
 public class Common {
+
+
     public static void setUp() {
         Driver.setDriver();
     }
@@ -43,6 +45,11 @@ public class Common {
     }
 
     public static void cickPrisijungti(By xpath) {
+        getElement(xpath).click();
+    }
+
+
+    public static void clickOnElement(By xpath) {
         getElement(xpath).click();
     }
 }
