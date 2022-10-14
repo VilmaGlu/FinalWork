@@ -8,7 +8,7 @@ public class HomeTest extends TestBase {
 
 
     @Test
-    private void registrationWhitPositiveInfo(){
+    private void registrationWhitPositiveInfo() {
         String expectedName = "Vilma";
         String expectedLastName = "Glusauske";
         String expectedEmail = "Vilmaboga@gmail.com";
@@ -26,14 +26,23 @@ public class HomeTest extends TestBase {
     }
 
     @Test
-    private void loginWhitNegativeInfo(){
+    private void loginWhitNegativeInfo() {
         String expectedEmail = "Vilmaboga@gmail.com";
         String negativePassword = "Kamuoliukas006";
         HomePage.clickPersonButtonIcon();
-        HomePage.clickRegisruotisButton();
-        HomePage.enterEmail(expectedEmail);
-        HomePage.enterPasword(negativePassword);
+        HomePage.enterEmailLogin(expectedEmail);
+        HomePage.enterPaswordLogin(negativePassword);
+        HomePage.clickPrisijungtiButton();
+    }
 
+    @Test
+    private void loginWhitPositiveInfo() {
+        String correctPassword = "Kamuoliukas003";;
+        String expectedEmail = "Vilmaboga@gmail.com";
+        HomePage.clickPersonButtonIcon();
+        HomePage.enterEmailLogin(expectedEmail);
+        HomePage.enterCorrectPasword(correctPassword);
+        HomePage.clickPrisijungtiButton();
     }
 }
 

@@ -62,4 +62,26 @@ public class HomePage {
     public static void clickFinalRegistruokisButton() {
         Common.clickFinalRegistruokis(By.xpath("//*[@id='form-validate']/div[1]/div[1]/button"));
     }
+
+
+    public static void enterEmailLogin(String expectedEmail) {
+        Common.sendKeysToElement(expectedEmail,
+                By.xpath("//*[@id='email']"));
+    }
+
+    public static void enterPaswordLogin(String negativePassword) {
+        Common.sendKeysToElement(negativePassword,
+                By.xpath("//*[@id='pass']"));
+    }
+
+    public static void clickPrisijungtiButton() {
+        Common.cickPrisijungti(By.xpath("//*[@id='send2']"));
+    }
+
+    public static void enterCorrectPasword(String correctPassword) {
+        Common.sendKeysToElement(correctPassword,
+        By.xpath("//*[@id='pass']"));
+
+
+    }
 }

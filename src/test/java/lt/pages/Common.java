@@ -41,5 +41,9 @@ public class Common {
     public static void clickFinalRegistruokis(By xpath) {
         getElement(xpath).click();
     }
+
+    public static void cickPrisijungti(By xpath) {
+        getElement(xpath).click();
+    }
 }
 
