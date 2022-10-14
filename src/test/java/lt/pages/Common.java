@@ -18,7 +18,13 @@ public class Common {
     public static void close() {
         Driver.close();
     }
-
+    public static void sleep(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
     public static WebElement getElement(By locator){
         return Driver.getDriver().findElement(locator);
     }

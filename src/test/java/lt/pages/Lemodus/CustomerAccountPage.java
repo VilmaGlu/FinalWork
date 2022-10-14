@@ -7,6 +7,8 @@ public class CustomerAccountPage {
     public static void open(String url) {
         Common.openUrl(url);
     }
+    public static void sleep(int millis) {
+        Common.sleep(millis);}
 
     public static void clickSearchField() {
         Common.clickOnElement(Locators.Lemodus.CustomerAccont.searchField);

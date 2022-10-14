@@ -20,7 +20,8 @@ public class HomePage {
     public static void close() {
         Common.close();
     }
-
+    public static void sleep(int millis) {
+        Common.sleep(millis);}
     public static void enterName(String expectedName) {
         Common.sendKeysToElement(expectedName,
                 Locators.Lemodus.Home.inputName);

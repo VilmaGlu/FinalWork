@@ -16,4 +16,6 @@ public class NaujienosPage {
     public static void clickOnIKrepseli() {
         Common.clickOnElement(Locators.Lemodus.Naujienos.clickOnButtonAddToCart);
     }
+    public static void sleep(int millis) {
+        Common.sleep(millis);}
 }
