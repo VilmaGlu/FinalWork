@@ -1,27 +1,19 @@
 package Tests.Lemodus;
 
-import lt.pages.Lemodus.HomePage;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import Tests.TestBase;
 import org.testng.annotations.Test;
 
-public class HomeTest {
+public class HomeTest extends TestBase {
 
-    @BeforeMethod
-    private void setUp() {
-        HomePage.setUp();
-        HomePage.open("https://www.lemodus.lt/");
-
-    }
 
     @Test
     private void test() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e){
+            throw new RuntimeException(e);
+        }
 
-    }
-
-    @AfterMethod
-    private void tearDown() {
-        HomePage.close();
     }
 }
 
