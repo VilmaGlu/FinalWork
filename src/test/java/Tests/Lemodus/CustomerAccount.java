@@ -24,7 +24,8 @@ public class CustomerAccount extends TestBase {
         CustomerAccountPage.enterProductSuknele(expectedMesage);
         CustomerAccountPage.clickAutcoplete();
 
-        Assert.assertEquals(actualMesage,expectedMesage);
+        Assert.assertTrue(actualMesage.contains(expectedMesage));
+        CustomerAccountPage.sleep(1000);
 
     }
 
