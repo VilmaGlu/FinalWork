@@ -1,7 +1,7 @@
 package lt.pages.Lemodus;
 
 import lt.pages.Common;
-import org.openqa.selenium.By;
+import lt.pages.Locators;
 
 public class HomePage {
 
@@ -23,64 +23,64 @@ public class HomePage {
 
     public static void enterName(String expectedName) {
         Common.sendKeysToElement(expectedName,
-                By.xpath("//input[@id='firstname']"));
+                Locators.Lemodus.Home.inputName);
     }
 
     public static void clickPersonButtonIcon() {
-        Common.clicPersonIcon(
-                By.xpath("//div[@class ='header-account']"));
+        Common.clicPersonIcon(Locators.Lemodus.Home.headerPersonButton);
     }
 
     public static void clickRegisruotisButton() {
-        Common.clickRegistrokis(By.xpath("//*[@id='login-form']/div[1]/div[3]/div/div"));
+        Common.clickRegistrokis(Locators.Lemodus.Home.loginRegistruokisButton);
     }
 
     public static void enterLastName(String expectedLastName) {
         Common.sendKeysToElement(expectedLastName,
-                By.xpath("//*[@id='lastname']"));
+               Locators.Lemodus.Home.inputLastName);
     }
 
     public static void enterEmail(String expectedEmail) {
         Common.sendKeysToElement(expectedEmail,
-                By.xpath("//*[@id='email_address']"));
+               Locators.Lemodus.Home.inputEmail);
     }
 
     public static void enterPasword(String realPassword) {
         Common.sendKeysToElement(realPassword,
-                By.xpath("//*[@id='password']"));
+                Locators.Lemodus.CustomerAccont.realPassword);
     }
 
     public static void enterPaswordConfirm(String realPassword) {
         Common.sendKeysToElement(realPassword,
-                By.xpath("//*[@id='password-confirmation']"));
+               Locators.Lemodus.Home.inputPasword);
     }
 
     public static void confirmButton() {
-        Common.clickConfirm(By.xpath("//*[@id='custom_terms']"));
+        Common.clickConfirm(Locators.Lemodus.Home.inputConfirmPasword);
     }
 
     public static void clickFinalRegistruokisButton() {
-        Common.clickFinalRegistruokis(By.xpath("//*[@id='form-validate']/div[1]/div[1]/button"));
+        Common.clickFinalRegistruokis(Locators.Lemodus.Home.inputValidateForm);
     }
 
 
     public static void enterEmailLogin(String expectedEmail) {
         Common.sendKeysToElement(expectedEmail,
-                By.xpath("//*[@id='email']"));
+                Locators.Lemodus.Home.inputExpectedEmail);
     }
 
     public static void enterPaswordLogin(String negativePassword) {
-        Common.sendKeysToElement(negativePassword,
-                By.xpath("//*[@id='pass']"));
+        Common.sendKeysToElement(
+                negativePassword,Locators.Lemodus.Home.inputNegativePasword
+               );
     }
 
     public static void clickPrisijungtiButton() {
-        Common.cickPrisijungti(By.xpath("//*[@id='send2']"));
+        Common.cickPrisijungti(Locators.Lemodus.Home.inputPrisijungtiButton);
     }
 
     public static void enterCorrectPasword(String correctPassword) {
-        Common.sendKeysToElement(correctPassword,
-        By.xpath("//*[@id='pass']"));
+        Common.sendKeysToElement(correctPassword,Locators.Lemodus.Home.inputCorrectPasword
+        );
 
 
     }

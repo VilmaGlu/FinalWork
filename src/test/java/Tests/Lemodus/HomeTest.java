@@ -2,6 +2,7 @@ package Tests.Lemodus;
 
 import Tests.TestBase;
 import lt.pages.Lemodus.HomePage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class HomeTest extends TestBase {
@@ -12,19 +13,21 @@ public class HomeTest extends TestBase {
         String expectedName = "Vilma";
         String expectedLastName = "Glusauske";
         String expectedEmail = "Vilmaboga@gmail.com";
-        String realPassword = "Kamuoliukas003";
+        String expectedPassword = "Kamuoliukas003";
+
 
         HomePage.clickPersonButtonIcon();
         HomePage.clickRegisruotisButton();
         HomePage.enterName(expectedName);
         HomePage.enterLastName(expectedLastName);
         HomePage.enterEmail(expectedEmail);
-        HomePage.enterPasword(realPassword);
-        HomePage.enterPaswordConfirm(realPassword);
+        HomePage.enterPasword(expectedPassword);
+        HomePage.enterPaswordConfirm(expectedPassword);
         HomePage.confirmButton();
         HomePage.clickFinalRegistruokisButton();
-    }
 
+
+    }
     @Test
     private void loginWhitNegativeInfo() {
         String expectedEmail = "Vilmaboga@gmail.com";
@@ -33,6 +36,7 @@ public class HomeTest extends TestBase {
         HomePage.enterEmailLogin(expectedEmail);
         HomePage.enterPaswordLogin(negativePassword);
         HomePage.clickPrisijungtiButton();
+        Assert.assertEquals(expectedEmail, negativePassword);
     }
 
     @Test
@@ -43,6 +47,7 @@ public class HomeTest extends TestBase {
         HomePage.enterEmailLogin(expectedEmail);
         HomePage.enterCorrectPasword(correctPassword);
         HomePage.clickPrisijungtiButton();
+        Assert.assertEquals(expectedEmail, correctPassword);
     }
 }
 
