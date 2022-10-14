@@ -24,7 +24,8 @@ public class Naujienos extends TestBase {
         NaujienosPage.clickOnChooseDress();
         NaujienosPage.clickOnSize();
         NaujienosPage.clickOnIKrepseli();
-        Assert.assertEquals(actualDress,expectedDress);
+        Assert.assertTrue(actualDress.contains(expectedDress));
+        NaujienosPage.sleep(2000);
 
 
     }
