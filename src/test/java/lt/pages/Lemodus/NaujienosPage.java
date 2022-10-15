@@ -16,6 +16,29 @@ public class NaujienosPage {
     public static void clickOnIKrepseli() {
         Common.clickOnElement(Locators.Lemodus.Naujienos.clickOnButtonAddToCart);
     }
+
     public static void sleep(int millis) {
-        Common.sleep(millis);}
+        Common.sleep(millis);
+    }
+
+    public static void clickOnShowcart() {
+        Common.clickOnElement(Locators.Lemodus.Naujienos.openShowcart);
+    }
+
+    public static void clickOnCheckCart() {
+        Common.clickOnElement(Locators.Lemodus.Naujienos.checkCart);
+    }
+
+
+    public static void submitFormPage() {
+        Common.waitForElementShow(Locators.Lemodus.PositiveLogin.pageSubmit);
+    }
+
+    public static void clickCancelButton() {
+        Common.clickOnElement(Locators.Lemodus.PositiveLogin.pageSubmitCancel);
+    }
+
+    public static void clickOnDeleteCart() {
+        Common.clickOnElement(Locators.Lemodus.Naujienos.deleteCart);
+    }
 }

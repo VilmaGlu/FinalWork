@@ -23,7 +23,9 @@ public class CustomerAccount extends TestBase {
         CustomerAccountPage.clickSearchField();
         CustomerAccountPage.enterProductSuknele(expectedMesage);
         CustomerAccountPage.clickAutcoplete();
-
+        CustomerAccountPage.clickOnForYou();
+        CustomerAccountPage.clickOnPriseLowest();
+        CustomerAccountPage.clickCategoryForMan();
         Assert.assertTrue(actualMesage.contains(expectedMesage));
         CustomerAccountPage.sleep(1000);
 

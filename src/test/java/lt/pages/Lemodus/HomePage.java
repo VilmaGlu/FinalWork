@@ -37,12 +37,12 @@ public class HomePage {
 
     public static void enterLastName(String expectedLastName) {
         Common.sendKeysToElement(expectedLastName,
-               Locators.Lemodus.Home.inputLastName);
+                Locators.Lemodus.Home.inputLastName);
     }
 
     public static void enterEmail(String expectedEmail) {
         Common.sendKeysToElement(expectedEmail,
-               Locators.Lemodus.Home.inputEmail);
+                Locators.Lemodus.Home.inputEmail);
     }
 
     public static void enterPasword(String realPassword) {
@@ -52,7 +52,7 @@ public class HomePage {
 
     public static void enterPaswordConfirm(String realPassword) {
         Common.sendKeysToElement(realPassword,
-               Locators.Lemodus.Home.inputPasword);
+                Locators.Lemodus.Home.inputPasword);
     }
 
     public static void confirmButton() {
@@ -64,25 +64,18 @@ public class HomePage {
     }
 
 
-    public static void enterEmailLogin(String expectedEmail) {
-        Common.sendKeysToElement(expectedEmail,
-                Locators.Lemodus.Home.inputExpectedEmail);
+
+
+    public static void cancelOnSubmit() {
+        Common.waitForElementShow(Locators.Lemodus.Home.acceptCookie);
+        Common.clickOnElement(Locators.Lemodus.Home.cancelButton);
     }
 
-    public static void enterPaswordLogin(String negativePassword) {
-        Common.sendKeysToElement(
-                negativePassword,Locators.Lemodus.Home.inputNegativePasword
-               );
-    }
 
-    public static void clickPrisijungtiButton() {
-        Common.cickPrisijungti(Locators.Lemodus.Home.inputPrisijungtiButton);
-    }
-
-    public static void enterCorrectPasword(String correctPassword) {
-        Common.sendKeysToElement(correctPassword,Locators.Lemodus.Home.inputCorrectPasword
-        );
-
-
+    public static void cickOnLogOut() {
+        Common.clickOnElement(Locators.Lemodus.Home.enterLogOut);
     }
 }
+
+
+

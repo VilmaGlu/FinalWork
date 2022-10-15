@@ -24,6 +24,11 @@ public class Naujienos extends TestBase {
         NaujienosPage.clickOnChooseDress();
         NaujienosPage.clickOnSize();
         NaujienosPage.clickOnIKrepseli();
+        NaujienosPage.clickOnShowcart();
+        NaujienosPage.clickOnCheckCart();
+        NaujienosPage.clickOnDeleteCart();
+        NaujienosPage.submitFormPage();
+        NaujienosPage.clickCancelButton();
         Assert.assertTrue(actualDress.contains(expectedDress));
         NaujienosPage.sleep(2000);
 
