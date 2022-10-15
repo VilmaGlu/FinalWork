@@ -3,24 +3,24 @@ package lt.pages.Lemodus;
 import lt.pages.Common;
 import lt.pages.Locators;
 
-public class LoginPage {
+public class LoginPositivePage {
     public static void enterEmailLogin(String expectedEmail) {
-        Common.sendKeysToElement(expectedEmail,
-                Locators.Lemodus.Login.inputExpectedEmail);
+        Common.sendKeysToElement(
+                Locators.Lemodus.PositiveLogin.inputExpectedEmail);
     }
 
     public static void enterPaswordLogin(String negativePassword) {
         Common.sendKeysToElement(
-                negativePassword,Locators.Lemodus.Login.inputNegativePasword
+                Locators.Lemodus.PositiveLogin.inputNegativePasword
         );
     }
 
     public static void clickPrisijungtiButton() {
-        Common.cickPrisijungti(Locators.Lemodus.Login.inputPrisijungtiButton);
+        Common.cickPrisijungti(Locators.Lemodus.PositiveLogin.inputPrisijungtiButton);
     }
 
     public static void enterCorrectPasword(String correctPassword) {
-        Common.sendKeysToElement(correctPassword,Locators.Lemodus.Login.inputCorrectPasword
+        Common.sendKeysToElement(Locators.Lemodus.PositiveLogin.inputCorrectPasword
         );
 
 
