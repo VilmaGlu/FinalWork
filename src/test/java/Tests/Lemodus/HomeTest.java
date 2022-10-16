@@ -2,6 +2,7 @@ package Tests.Lemodus;
 
 import Tests.TestBase;
 import lt.pages.Lemodus.HomePage;
+import lt.pages.Lemodus.LoginPositivePage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -28,7 +29,8 @@ public class HomeTest extends TestBase {
         HomePage.clickOnForgotPassword();
         HomePage.enterEmail(expectedEmail);
         HomePage.confirmButton();
-        HomePage.cancelOnSubmit();
+        HomePage.submitFormPage();
+        HomePage.clickCancelButton();
 
         actualEmail = HomePage.readMessage();
         Assert.assertTrue(actualEmail.contains(expectedEmail));

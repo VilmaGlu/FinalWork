@@ -53,6 +53,15 @@ public class HomePage {
     public static String readMessage() {
         return  Common.getElementText(Locators.Lemodus.Home.readMessageEmailBox);
     }
+
+    public static void submitFormPage() {
+        Common.waitForElementShow(Locators.Lemodus.PositiveLogin.pageSubmit);
+    }
+
+    public static void clickCancelButton() {
+        Common.clickOnElement(Locators.Lemodus.PositiveLogin.pageSubmitCancel);
+
+    }
 }
 
 
