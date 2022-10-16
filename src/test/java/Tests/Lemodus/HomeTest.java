@@ -20,7 +20,7 @@ public class HomeTest extends TestBase {
     @Test
     public void passwordReminder() {
 
-        String expectedEmail = "vilmaboga@gmail.com";
+        String expectedEmail = "Vilmaboga@gmail.com";
         String actualEmail;
 
 

@@ -13,7 +13,7 @@ public class Locators {
             public static By inputEmail = By.xpath("//*[@id='email_address']");
             public static By submitButton = By.xpath("//*[@id='form-validate']/div[1]/div[1]/button");
             public static By acceptCookie =
-                    By.xpath("//*[@id='omnisend-form-63243c3f018728915f150995-close-icon']");
+                    By.xpath("//*[@id='omnisend-form-63243c3f018728915f150995-close-button']");
 
 
             public static By readMessageEmailBox = By.xpath("//*[@id='email_address']");

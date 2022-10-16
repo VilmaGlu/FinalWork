@@ -18,7 +18,7 @@ public class LoginPositiveTest extends TestBase {
     private void loginWhitPositiveInfo() {
         String expectedCorrectPassword = "Kamuoliukas003";
         String actualCorrectPassword;
-        String expectedEmail = "vilmaautotest@gmail.com";
+        String expectedEmail = "VilmaBoga@gmail.com";
         String actualEmail;
 
 

@@ -17,7 +17,7 @@ public class NegativeLoginTest extends TestBase {
 
     @Test
     private void loginWhitNegativeInfo() {
-        String expectedEmail = "vilmaautotest@gmail.com";
+        String expectedEmail = "VilmaBoga@gmail.com";
         String actualEmail;
         String expectedNegativePassword = "Kamuoliukas006";
         String actualNegativePassword;
