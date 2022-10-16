@@ -18,9 +18,9 @@ public class Naujienos extends TestBase {
     }
 
     @Test
-    private void toBaySomeDress(){
-    String expectedDress = "Moteriska suknele (ESPRIT Collection)";
-    String actualDress;
+    private void toBaySomeDress() {
+        String expectedDress = "Moteriska suknele (ESPRIT Collection)";
+        String actualDress;
         NaujienosPage.clickOnChooseDress();
         NaujienosPage.clickOnSize();
         NaujienosPage.clickOnIKrepseli();
@@ -32,7 +32,10 @@ public class Naujienos extends TestBase {
 
 
         actualDress = NaujienosPage.readMessage();
-        Assert.assertEquals(actualDress,expectedDress);
+        Assert.assertTrue(actualDress.contains(expectedDress),
+                String.format("Actual [%s]; Expected [%s]",
+                        actualDress, expectedDress));
+
         NaujienosPage.sleep(2000);
     }
 }

@@ -66,6 +66,7 @@ public class Locators {
         public static class NegativeLogin {
             public static By inputNegativePassword = By.xpath("//*[@id='pass']");
 
+            public static By messageError = By.xpath("//*[@id='maincontent']/div[1]/div[2]");
         }
 
     }

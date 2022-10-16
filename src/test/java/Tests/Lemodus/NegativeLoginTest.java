@@ -25,13 +25,19 @@ public class NegativeLoginTest extends TestBase {
         NegativeLogintPage.enterEmailLogin(expectedEmail);
         NegativeLogintPage.enterPaswordLogin(expectedNegativePassword);
         NegativeLogintPage.clickPrisijungtiButton();
+        NegativeLogintPage.errorMessageShow();
 
 
         actualEmail = NegativeLogintPage.readEmail();
-        Assert.assertEquals(actualEmail,expectedNegativePassword);
+        Assert.assertTrue(actualEmail.contains(expectedEmail),
+                String.format("Actual [%s]; Expected [%s]",
+                        actualEmail, expectedEmail));
+
 
         actualNegativePassword = NegativeLogintPage.readPassword();
-        Assert.assertEquals(actualNegativePassword,expectedEmail);
+        Assert.assertTrue(actualNegativePassword.contains(expectedNegativePassword),
+                String.format("Actual [%s]; Expected [%s]",
+                        actualNegativePassword, expectedNegativePassword));
 
         HomePage.sleep(2000);
     }

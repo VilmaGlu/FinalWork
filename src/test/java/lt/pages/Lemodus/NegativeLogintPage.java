@@ -27,13 +27,17 @@ public class NegativeLogintPage {
     }
 
     public static String readEmail() {
-      return  Common.getElementText(
-              Locators.Lemodus.PositiveLogin.paragraphEmail);
+        return Common.getElementText(
+                Locators.Lemodus.PositiveLogin.paragraphEmail);
 
     }
 
     public static String readPassword() {
-        return  Common.getElementText(
+        return Common.getElementText(
                 Locators.Lemodus.PositiveLogin.inputCorrectPasword);
+    }
+
+    public static void errorMessageShow() {
+        Common.waitForElementShow(Locators.Lemodus.NegativeLogin.messageError);
     }
 }
