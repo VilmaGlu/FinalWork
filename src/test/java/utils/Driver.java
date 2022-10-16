@@ -27,14 +27,14 @@ public class Driver {
 
     }
 
-    public static void close() {
-
-    }
 
     private static ChromeOptions setUpOptions(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("window-size=2000,3000");
         options.addArguments("--force-device-scale-factor=0.75");
         return options;
+    }
+
+    public static void close() {
     }
 }

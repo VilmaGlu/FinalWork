@@ -38,6 +38,10 @@ public class CustomerAccountPage {
     public static void clickCategoryForMan() {
         Common.clickOnElement(Locators.Lemodus.CustomerAccont.listOfRole);
     }
+
+    public static String readMessageFromCustomerPage() {
+        return Common.getElementText(Locators.Lemodus.CustomerAccont.paragraphBox);
+    }
 }
 
 

@@ -42,5 +42,15 @@ public class LoginPositivePage {
     public static void clickCancelButton() {
         Common.clickOnElement(Locators.Lemodus.PositiveLogin.pageSubmitCancel);
     }
+
+    public static String readMessageCorrectPassword() {
+        return Common.getElementText(
+                Locators.Lemodus.PositiveLogin.paragraphCurrentPassword);
+    }
+
+    public static String readMessageEmail() {
+        return Common.getElementText(
+                Locators.Lemodus.PositiveLogin.paragraphEmail);
+    }
 }
 

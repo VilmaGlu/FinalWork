@@ -17,6 +17,6 @@ public class TestBase {
     }
     @AfterMethod
     public void tearDown() {
-        HomePage.close();
+        HomePage.closeDrive();
     }
 }

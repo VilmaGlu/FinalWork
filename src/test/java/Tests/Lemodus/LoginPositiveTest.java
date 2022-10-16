@@ -15,11 +15,13 @@ public class LoginPositiveTest extends TestBase {
         LoginPositivePage.open("https://www.lemodus.lt/customer/account/login/");
     }
     @Test
-    private void loginWhitPositiveInfo() {
+    public void loginWhitPositiveInfo() {
         String expectedCorrectPassword = "Kamuoliukas003";
-        String actualCorrectPassword = "Positive Passwor";
-        String expectedEmail = "glubogavilma@gmail.com";
-        String actualEmail = "Positive Email";
+        String actualCorrectPassword = "";
+        String expectedEmail = "vilmaautotest@gmail.com";
+        String actualEmail = "";
+
+
         LoginPositivePage.clickPersonButtonIcon();
         LoginPositivePage.enterEmailLogin(expectedEmail);
         LoginPositivePage.enterCorrectPasword(expectedCorrectPassword);
@@ -28,22 +30,12 @@ public class LoginPositiveTest extends TestBase {
         LoginPositivePage.submitFormPage();
         LoginPositivePage.clickCancelButton();
 
-        Assert.assertTrue(
-                actualCorrectPassword.contains(expectedCorrectPassword),
-                String.format(
-                        "Actual: %s; Expected contains: %s",
-                        actualCorrectPassword,
-                        expectedCorrectPassword
 
-                ));
-        Assert.assertTrue(
-                actualEmail.contains(expectedEmail),
-                String.format(
-                        "Actual: %s; Expected contains: %s",
-                        actualEmail,
-                        expectedEmail
+        actualCorrectPassword = LoginPositivePage.readMessageCorrectPassword();
+        Assert.assertEquals(actualCorrectPassword,expectedCorrectPassword);
+        actualEmail = LoginPositivePage.readMessageEmail();
+        Assert.assertEquals(actualEmail,expectedEmail);
 
-                ));
         HomePage.sleep(2000);
     }
 

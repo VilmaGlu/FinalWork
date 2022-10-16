@@ -41,4 +41,8 @@ public class NaujienosPage {
     public static void clickOnDeleteCart() {
         Common.clickOnElement(Locators.Lemodus.Naujienos.deleteCart);
     }
+
+    public static String readMessage() {
+        return Common.getElementText(Locators.Lemodus.Naujienos.pageTitle);
+    }
 }

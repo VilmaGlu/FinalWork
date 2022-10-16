@@ -16,18 +16,22 @@ public class CustomerAccount extends TestBase {
     }
 
     @Test
-    private void searchField() {
-        String expectedMesage = "Suknele esprit casual";
-        String actualMesage = null;
+    public void searchField() {
+        String expectedMessage = "Suknele esprit casual";
+        String actualMessage;
 
         CustomerAccountPage.clickSearchField();
-        CustomerAccountPage.enterProductSuknele(expectedMesage);
+        CustomerAccountPage.enterProductSuknele(expectedMessage);
         CustomerAccountPage.clickAutcoplete();
         CustomerAccountPage.clickOnForYou();
         CustomerAccountPage.clickOnPriseLowest();
         CustomerAccountPage.clickCategoryForMan();
-        Assert.assertTrue(actualMesage.contains(expectedMesage));
-        CustomerAccountPage.sleep(1000);
+
+        actualMessage = CustomerAccountPage.readMessageFromCustomerPage();
+        Assert.assertEquals(actualMessage, expectedMessage);
+        CustomerAccountPage.sleep(3000);
+
+
 
     }
 

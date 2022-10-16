@@ -15,7 +15,7 @@ public class NegativeLogintPage {
 
     public static void enterPaswordLogin(String expectedNegativePassword) {
         Common.sendKeysToElement(expectedNegativePassword,
-                Locators.Lemodus.NegativeLogint.inputNegativePasword);
+                Locators.Lemodus.NegativeLogin.inputNegativePassword);
     }
 
     public static void clickPrisijungtiButton() {
@@ -24,5 +24,16 @@ public class NegativeLogintPage {
 
     public static void open(String url) {
         Common.openUrl(url);
+    }
+
+    public static String readEmail() {
+      return  Common.getElementText(
+              Locators.Lemodus.PositiveLogin.paragraphEmail);
+
+    }
+
+    public static String readPassword() {
+        return  Common.getElementText(
+                Locators.Lemodus.PositiveLogin.inputCorrectPasword);
     }
 }

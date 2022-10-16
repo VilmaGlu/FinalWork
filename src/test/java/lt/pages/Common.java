@@ -19,7 +19,7 @@ public class Common {
         Driver.openUrl(url);
     }
 
-    public static void close() {
+    public static void closeDriver() {
         Driver.close();
     }
 
@@ -36,20 +36,20 @@ public class Common {
     }
 
 
-    public static void clicPersonIcon(By xpath) {
-        getElement(xpath).click();
+    public static void clicPersonIcon(By Locators) {
+        getElement(Locators).click();
     }
 
-    public static void clickRegistrokis(By xpath) {
-        getElement(xpath).click();
+    public static void clickRegistrokis(By Locators) {
+        getElement(Locators).click();
     }
 
-    public static void clickConfirm(By xpath) {
-        getElement(xpath).click();
+    public static void clickConfirm(By Locators) {
+        getElement(Locators).click();
     }
 
-    public static void clickFinalRegistruokis(By xpath) {
-        getElement(xpath).click();
+    public static void clickFinalRegistruokis(By Locators) {
+        getElement(Locators).click();
     }
 
     public static void cickPrisijungti(By Locators) {
@@ -57,8 +57,8 @@ public class Common {
     }
 
 
-    public static void clickOnElement(By xpath) {
-        getElement(xpath).click();
+    public static void clickOnElement(By Locators) {
+        getElement(Locators).click();
     }
 
     public static void waitForElementShow(By locator) {
@@ -69,6 +69,10 @@ public class Common {
     public static void sendKeysToElement(String keys, By locator) {
         getElement(locator).sendKeys(keys);
 
+    }
+
+    public static String getElementText( By locator) {
+        return getElement(locator).getText();
     }
 }
 
