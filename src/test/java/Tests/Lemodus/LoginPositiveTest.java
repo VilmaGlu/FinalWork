@@ -1,7 +1,6 @@
 package Tests.Lemodus;
 
 import Tests.TestBase;
-import lt.pages.Lemodus.HomePage;
 import lt.pages.Lemodus.LoginPositivePage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -16,30 +15,22 @@ public class LoginPositiveTest extends TestBase {
     }
 
     @Test
-    private void loginWhitPositiveInfo() {
-        String expectedCorrectPassword = "Kamuoliukas003";
-        String actualCorrectPassword = null;
-        String expectedEmail = "VilmaBoga@gmail.com";
-        String actualEmail = null;
+    public void loginWhitPositiveInfo() {
 
+        String expectedTextMessage = "";
+        String actualTextMessage;
 
         LoginPositivePage.clickPersonButtonIcon();
-        LoginPositivePage.enterEmailLogin(expectedEmail);
-        LoginPositivePage.enterCorrectPasword(expectedCorrectPassword);
+        LoginPositivePage.enterEmailLogin("Vilmaboga@gmail.com");
+        LoginPositivePage.enterCorrectPasword("Kamuoliukas003");
         LoginPositivePage.clickPrisijungtiButton();
         LoginPositivePage.clickLogOutButton();
         LoginPositivePage.submitFormPage();
         LoginPositivePage.clickCancelButton();
+        LoginPositivePage.readLogo();
 
-
-        actualCorrectPassword = LoginPositivePage.readMessageCorrectPassword();
-        Assert.assertTrue(actualCorrectPassword.contains(expectedCorrectPassword),
-                String.format("Actual [%s]; Expected [%s]", actualCorrectPassword, expectedCorrectPassword));
-
-        actualEmail = LoginPositivePage.readMessageEmail();
-        Assert.assertTrue(actualEmail.contains(expectedEmail),
-                String.format("Actual [%s]; Expected [%s]", actualEmail, expectedEmail));
-        HomePage.sleep(2000);
+        actualTextMessage = LoginPositivePage.sucsesfulLogin();
+        Assert.assertEquals(actualTextMessage, expectedTextMessage);
     }
 
 }

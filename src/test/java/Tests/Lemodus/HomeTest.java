@@ -19,24 +19,23 @@ public class HomeTest extends TestBase {
 
 
     @Test
-    public void passwordReminder() {
+   private void passwordReminder() {
 
-        String expectedEmail = "Vilmaboga@gmail.com";
-        String actualEmail;
+        String expectedResult= "";
+        String actualResult;
 
 
         HomePage.clickPersonButtonIcon();
         HomePage.clickOnForgotPassword();
-        HomePage.enterEmail(expectedEmail);
+        HomePage.enterEmail("Vilmaboga@gmail.com");
         HomePage.confirmButton();
         HomePage.submitFormPage();
         HomePage.clickCancelButton();
 
-        actualEmail = HomePage.readMessage();
-        Assert.assertTrue(actualEmail.contains(expectedEmail));
+        actualResult = HomePage.readMessage();
+        Assert.assertTrue(actualResult.contains(expectedResult));
 
 
-        HomePage.sleep(2000);
 
     }
 }

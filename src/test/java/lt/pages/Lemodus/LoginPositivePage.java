@@ -43,14 +43,14 @@ public class LoginPositivePage {
         Common.clickOnElement(Locators.Lemodus.PositiveLogin.pageSubmitCancel);
     }
 
-    public static String readMessageCorrectPassword() {
-        return Common.getElementText(
-                Locators.Lemodus.PositiveLogin.paragraphCurrentPassword);
+
+    public static void readLogo() {
+        Common.waitForElementShow(Locators.Lemodus.PositiveLogin.logocheck);
     }
 
-    public static String readMessageEmail() {
-        return Common.getElementText(
-                Locators.Lemodus.PositiveLogin.paragraphEmail);
+    public static String sucsesfulLogin() {
+        return  Common.waitForElementShow(Locators.Lemodus.PositiveLogin.loginpage);
     }
 }
+
 

@@ -7,11 +7,10 @@ public class Locators {
 
 
         public static class Home {
-            public static By inputName = By.xpath("//input[@id='firstname']");
-            public static By headerPersonButton = By.xpath("//div[@class ='header-account']");
-            public static By forgetPassword = By.xpath("//*[@id='login-form']/fieldset/div[3]/div[2]/a");
+            public static By headerPersonButton = By.xpath("//*[contains(@class,'header-account')]");
+            public static By forgetPassword = By.xpath("//*[contains(@class,'action remind')]");
             public static By inputEmail = By.xpath("//*[@id='email_address']");
-            public static By submitButton = By.xpath("//*[@id='form-validate']/div[1]/div[1]/button");
+            public static By submitButton = By.xpath("//*[contains(@class,'action submit primary')]");
             public static By acceptCookie =
                     By.xpath("//*[@id='omnisend-form-63243c3f018728915f150995-close-icon']");
 
@@ -36,24 +35,25 @@ public class Locators {
 
         public static class Naujienos {
             public static By clickOnDress =
-                    By.xpath("//*[@id='product-item-info_353647']/div[1]/a[2]");
-            public static By clickLabelSize = By.xpath("//*[@id='option-label-size-144-item-24']");
+                    By.xpath("//*[contains(@class,'product-image-wrapper')]");
+            public static By clickLabelSize = By.xpath("//*[@id='option-label-size-144-item-27']");
             public static By clickOnButtonAddToCart = By.xpath("//*[@id='product-addtocart-button']");
             public static By openShowcart = By.xpath(
-                    "//*[@id='html-body']/div[4]/header/div[2]/div/div/div/div/div[3]/div[2]/a");
+                    "//*[contains(@class,'action showcart')]");
             public static By checkCart = By.xpath(
-                    "//*[@id='minicart-content-wrapper']/div[2]/div[5]/div");
+                    "//*[contains(@class,'action viewcart button button--full-width button--secondary')]");
             public static By deleteCart = By.xpath(
-                    "//*[@id='shopping-cart-table']/tbody/tr[2]/td/div/a[2]");
+                    "//*[contains(@class, 'action action-delete')]");
 
-            public static By pageTitle = By.xpath("//*[@id='html-body']");
+            public static By pageTitle = By.xpath("//*[@id='maincontent']/div[1]/h1/span");
         }
 
         public static class PositiveLogin {
             public static By inputExpectedEmail = By.xpath("//*[@id='email']");
-            public static By inputPrisijungtiButton = By.xpath("//*[@id='send2']");
+
             public static By inputCorrectPasword = By.xpath("//*[@id='pass']");
-            public static By clickLogOut = By.xpath("//*[@id='block-collapsible-nav']/div/a");
+            public static By inputPrisijungtiButton = By.xpath("//*[@id='send2']");
+            public static By  clickLogOut = By.xpath("//*[contains(@class,'logout-button')]");
             public static By pageSubmit = By.xpath(
                     "//*[@id='omnisend-form-63243c3f018728915f150995-submit-form']");
             public static By pageSubmitCancel = By.xpath(
@@ -61,6 +61,8 @@ public class Locators {
             public static By paragraphCurrentPassword = By.xpath(
                     "//*[@id='pass']");
             public static By paragraphEmail = By.xpath("//*[@id='email']");
+            public static By logocheck = By.xpath("//*[contains(@class,'base')]");
+            public static By loginpage = By.xpath("//*[contains(@class,'page-title-wrapper')]");
         }
 
         public static class NegativeLogin {

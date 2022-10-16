@@ -16,30 +16,19 @@ public class NegativeLoginTest extends TestBase {
     }
 
     @Test
-    private void loginWhitNegativeInfo() {
-        String expectedEmail = "VilmaBoga@gmail.com";
-        String actualEmail;
-        String expectedNegativePassword = "Kamuoliukas006";
-        String actualNegativePassword;
+    private void loginWhitNegativePasswordInfo() {
+        String expectedNegativePassword = "";
+        String actualNegativePassword = "";
+
         NegativeLogintPage.clickPersonButtonIcon();
-        NegativeLogintPage.enterEmailLogin(expectedEmail);
-        NegativeLogintPage.enterPaswordLogin(expectedNegativePassword);
+        NegativeLogintPage.enterEmailLogin("VilmaBoga@gmail.com");
+        NegativeLogintPage.enterPaswordLogin("Kamuoliukas006");
         NegativeLogintPage.clickPrisijungtiButton();
         NegativeLogintPage.errorMessageShow();
 
 
-        actualEmail = NegativeLogintPage.readEmail();
-        Assert.assertTrue(actualEmail.contains(expectedEmail),
-                String.format("Actual [%s]; Expected [%s]",
-                        actualEmail, expectedEmail));
-
-
         actualNegativePassword = NegativeLogintPage.readPassword();
-        Assert.assertTrue(actualNegativePassword.contains(expectedNegativePassword),
-                String.format("Actual [%s]; Expected [%s]",
-                        actualNegativePassword, expectedNegativePassword));
-
-        HomePage.sleep(2000);
+        Assert.assertEquals(actualNegativePassword, expectedNegativePassword);
     }
 
 

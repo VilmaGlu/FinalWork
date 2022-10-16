@@ -48,9 +48,6 @@ public class Common {
         getElement(Locators).click();
     }
 
-    public static void clickFinalRegistruokis(By Locators) {
-        getElement(Locators).click();
-    }
 
     public static void cickPrisijungti(By Locators) {
         getElement(Locators).click();
@@ -61,9 +58,10 @@ public class Common {
         getElement(Locators).click();
     }
 
-    public static void waitForElementShow(By locator) {
+    public static String waitForElementShow(By locator) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(8));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return null;
     }
 
     public static void sendKeysToElement(String keys, By locator) {
