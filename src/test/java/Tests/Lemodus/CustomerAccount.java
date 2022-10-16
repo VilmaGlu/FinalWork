@@ -16,7 +16,7 @@ public class CustomerAccount extends TestBase {
     }
 
     @Test
-    private void searchField() {
+  public void searchField() {
         String expectedMessage = "Suknele esprit casual";
         String actualMessage;
 
@@ -30,8 +30,6 @@ public class CustomerAccount extends TestBase {
         actualMessage = CustomerAccountPage.readMessageFromCustomerPage();
         Assert.assertEquals(actualMessage, expectedMessage);
         CustomerAccountPage.sleep(3000);
-
-
 
     }
 

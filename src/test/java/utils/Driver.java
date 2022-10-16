@@ -35,6 +35,8 @@ public class Driver {
         return options;
     }
 
+
     public static void close() {
+        driver.quit();
     }
 }
