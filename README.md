@@ -6,14 +6,10 @@ Pasirinkta testuoti svetainė: https://www.lemodus.lt/
 
 1. Registation form:
    * click person button icon;;
-   * click registration button;
-   * enter valid name;
-   * enter valid last name*;
-   * enter valid email;
-   * enter valid password;
-   * enter password repeat;
-   * click on submit button;
-   * click on registration button;
+   * click forgot button;
+   * enter Email;
+   * Click on confirm button*;
+   
 
 
 2. Try logging in using valid email and valid password:
@@ -21,7 +17,7 @@ Pasirinkta testuoti svetainė: https://www.lemodus.lt/
    * enter valid email address;
    * enter valid password;
    * click on button log in;
-   * click on button log out;
+  
 
 
 3. Try login whit invalid password:
