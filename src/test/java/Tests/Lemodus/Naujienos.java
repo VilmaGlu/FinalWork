@@ -18,7 +18,7 @@ public class Naujienos extends TestBase {
     }
 
     @Test
-    public void toBaySomeDress(){
+    private void toBaySomeDress(){
     String expectedDress = "Moteriska suknele (ESPRIT Collection)";
     String actualDress;
         NaujienosPage.clickOnChooseDress();

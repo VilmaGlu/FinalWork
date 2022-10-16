@@ -16,7 +16,7 @@ public class CustomerAccount extends TestBase {
     }
 
     @Test
-    public void searchField() {
+    private void searchField() {
         String expectedMessage = "Suknele esprit casual";
         String actualMessage;
 

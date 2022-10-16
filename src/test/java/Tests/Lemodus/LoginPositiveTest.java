@@ -15,11 +15,11 @@ public class LoginPositiveTest extends TestBase {
         LoginPositivePage.open("https://www.lemodus.lt/customer/account/login/");
     }
     @Test
-    public void loginWhitPositiveInfo() {
+    private void loginWhitPositiveInfo() {
         String expectedCorrectPassword = "Kamuoliukas003";
-        String actualCorrectPassword = "";
+        String actualCorrectPassword;
         String expectedEmail = "vilmaautotest@gmail.com";
-        String actualEmail = "";
+        String actualEmail;
 
 
         LoginPositivePage.clickPersonButtonIcon();

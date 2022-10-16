@@ -50,8 +50,10 @@ public class HomePage {
     }
 
 
-
+    public static String readMessage() {
+        return  Common.getElementText(Locators.Lemodus.Home.readMessageEmailBox);
     }
+}
 
 
 

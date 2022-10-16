@@ -16,7 +16,7 @@ public class Locators {
                     By.xpath("//*[@id='omnisend-form-63243c3f018728915f150995-close-icon']");
 
 
-
+            public static By readMessageEmailBox = By.xpath("//*[@id='email_address']");
         }
 
         public static class CustomerAccont {

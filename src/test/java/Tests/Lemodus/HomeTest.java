@@ -18,10 +18,10 @@ public class HomeTest extends TestBase {
 
 
     @Test
-    public void registrationWhitPositiveInfo() {
+    public void passwordReminder() {
 
-        String expectedEmail = "vilmaautotest@gmail.com";
-        String actualEmail = null;
+        String expectedEmail = "vilmaboga@gmail.com";
+        String actualEmail;
 
 
         HomePage.clickPersonButtonIcon();
@@ -30,8 +30,8 @@ public class HomeTest extends TestBase {
         HomePage.confirmButton();
         HomePage.cancelOnSubmit();
 
-
-        Assert.assertEquals(actualEmail,expectedEmail);
+        actualEmail = HomePage.readMessage();
+        Assert.assertTrue(actualEmail.contains(expectedEmail));
 
 
         HomePage.sleep(2000);
