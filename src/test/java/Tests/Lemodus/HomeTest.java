@@ -14,58 +14,26 @@ public class HomeTest extends TestBase {
         HomePage.open("https://www.lemodus.lt/)");
 
 
-
     }
 
 
     @Test
-    private void registrationWhitPositiveInfo() {
-        String expectedName = "Vilma";
-        String expectedLastName = "Glusauske";
-        String expectedEmail = "glubogavilma@gmail.com";
-        String expectedPassword = "Kamuoliukas003";
-        String actualMessage = null;
+    public void registrationWhitPositiveInfo() {
+
+        String expectedEmail = "vilmaautotest@gmail.com";
+        String actualEmail = null;
+
 
         HomePage.clickPersonButtonIcon();
-        HomePage.clickRegisruotisButton();
-        HomePage.enterName(expectedName);
-        HomePage.enterLastName(expectedLastName);
+        HomePage.clickOnForgotPassword();
         HomePage.enterEmail(expectedEmail);
-        HomePage.enterPasword(expectedPassword);
-        HomePage.enterPaswordConfirm(expectedPassword);
         HomePage.confirmButton();
-        HomePage.clickFinalRegistruokisButton();
         HomePage.cancelOnSubmit();
-        HomePage.cickOnLogOut();
 
-        Assert.assertTrue(
-                actualMessage.contains(expectedName),
-                String.format(
-                        "Actual: %s; Expected contains: %s",
-                        actualMessage,
-                        expectedName
-                ));
-        Assert.assertTrue(
-                actualMessage.contains(expectedLastName),
-                String.format(
-                        "Actual: %s; Expected contains: %s",
-                        actualMessage,
-                        expectedLastName
-                ));
-        Assert.assertTrue(
-                actualMessage.contains(expectedEmail),
-                String.format(
-                        "Actual: %s; Expected contains: %s",
-                        actualMessage,
-                        expectedEmail
-                ));
-        Assert.assertTrue(
-                actualMessage.contains(expectedPassword),
-                String.format(
-                        "Actual: %s; Expected contains: %s",
-                        actualMessage,
-                        expectedPassword
-                ));
+
+        Assert.assertEquals(actualEmail,expectedEmail);
+
+
         HomePage.sleep(2000);
 
     }
