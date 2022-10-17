@@ -4,7 +4,7 @@ Pasirinkta testuoti svetainė: https://www.lemodus.lt/
 
 # Tests:
 
-1. Registation form:
+1. Password reminder form:
    * click person button icon;;
    * click forgot button;
    * enter Email;
@@ -25,6 +25,7 @@ Pasirinkta testuoti svetainė: https://www.lemodus.lt/
    * enter valid email address;
    * enter invalid password;
    * click on button log in;
+   * click on submit form;
 
 
 
@@ -32,16 +33,17 @@ Pasirinkta testuoti svetainė: https://www.lemodus.lt/
     * Click on search field
     * enter text in input field *"Paieška"*; ("Suknele esprit casual")
     * click autocomplete;
-    * chose setings "For You";
+    * chose settings "For You";
     * chose to show prise lowest;
     * chose category for man;
 
    
-5. Try add in cart to bay some cloches:
+5. Try add product to the shopping cart:
    * Choose product;
    * click to choose a size ;
    * clit to put in cart;
    * click on cart to check ;
    * delete product from cart;
+   * click on submit form;
 
 
