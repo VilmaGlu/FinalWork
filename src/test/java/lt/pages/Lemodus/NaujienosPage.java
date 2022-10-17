@@ -10,7 +10,6 @@ public class NaujienosPage {
 
     public static void clickOnSize() {
         Common.clickOnElement(Locators.Lemodus.Naujienos.clickLabelSize);
-
     }
 
     public static void clickOnIKrepseli() {
@@ -27,11 +26,6 @@ public class NaujienosPage {
 
     public static void clickOnCheckCart() {
         Common.clickOnElement(Locators.Lemodus.Naujienos.checkCart);
-    }
-
-
-    public static void submitFormPage() {
-        Common.waitForElementShow(Locators.Lemodus.PositiveLogin.pageSubmit);
     }
 
     public static void clickCancelButton() {

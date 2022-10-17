@@ -22,12 +22,13 @@ public class LoginTest extends TestBase {
 
         LoginPage.clickPersonButtonIcon();
         LoginPage.enterEmailLogin("Vilmaboga@gmail.com");
-        LoginPage.enterCorrectPasword("Kamuoliukas003");
+        LoginPage.enterCorrectPassword("Kamuoliukas003");
         LoginPage.clickPrisijungtiButton();
 
-        actualTextMessage = LoginPage.sucsesfulLogin();
+        actualTextMessage = LoginPage.successfulLogin();
         Assert.assertEquals(actualTextMessage, expectedTextMessage);
     }
+
     @Test
     public void loginWhitNegativePasswordInfo() {
         String expectedNegativePassword = "";
@@ -35,7 +36,7 @@ public class LoginTest extends TestBase {
 
         LoginPage.clickPersonButtonIcon();
         LoginPage.enterEmailLogin("VilmaBoga@gmail.com");
-        LoginPage.enterPaswordLogin("Kamuoliukas006");
+        LoginPage.enterPasswordLogin("Kamuoliukas006");
         LoginPage.clickPrisijungtiButton();
         LoginPage.errorMessageShow();
 

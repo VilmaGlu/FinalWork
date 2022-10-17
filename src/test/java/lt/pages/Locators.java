@@ -7,14 +7,14 @@ public class Locators {
 
 
         public static class Home {
-            public static By headerPersonButton = By.xpath("//*[contains(@class,'header-account')]");
-            public static By forgetPassword = By.xpath("//*[contains(@class,'action remind')]");
+            public static By headerPersonButton = By.xpath(
+                    "//*[contains(@class,'header-account')]");
+            public static By forgetPassword = By.xpath(
+                    "//*[contains(@class,'action remind')]");
             public static By inputEmail = By.xpath("//*[@id='email_address']");
             public static By submitButton = By.xpath("//*[contains(@class,'action submit primary')]");
             public static By acceptCookie =
                     By.xpath("//*[@id='omnisend-form-63243c3f018728915f150995-close-icon']");
-
-
             public static By readMessageEmailBox = By.xpath("//*[@id='email_address']");
         }
 
@@ -50,12 +50,8 @@ public class Locators {
 
         public static class PositiveLogin {
             public static By inputExpectedEmail = By.xpath("//*[@id='email']");
-
             public static By inputCorrectPasword = By.xpath("//*[@id='pass']");
             public static By inputPrisijungtiButton = By.xpath("//*[@id='send2']");
-            public static By  clickLogOut = By.xpath("//*[contains(@class,'logout-button')]");
-            public static By pageSubmit = By.xpath(
-                    "//*[@id='omnisend-form-63243c3f018728915f150995-submit-form']");
             public static By pageSubmitCancel = By.xpath(
                     "//*[@id='omnisend-form-63243c3f018728915f150995-close-action']");
             public static By paragraphCurrentPassword = By.xpath(
@@ -67,10 +63,7 @@ public class Locators {
 
         public static class NegativeLogin {
             public static By inputNegativePassword = By.xpath("//*[@id='pass']");
-
             public static By messageError = By.xpath("//*[@id='maincontent']/div[1]/div[2]");
         }
-
     }
-
 }

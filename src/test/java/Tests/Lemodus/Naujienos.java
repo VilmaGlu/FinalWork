@@ -28,7 +28,6 @@ public class Naujienos extends TestBase {
         NaujienosPage.clickOnShowcart();
         NaujienosPage.clickOnCheckCart();
         NaujienosPage.clickOnDeleteCart();
-        NaujienosPage.submitFormPage();
         NaujienosPage.clickCancelButton();
 
 

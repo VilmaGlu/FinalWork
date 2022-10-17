@@ -9,8 +9,6 @@ import utils.Driver;
 import java.time.Duration;
 
 public class Common {
-
-
     public static void setUp() {
         Driver.setDriver();
     }
@@ -35,7 +33,6 @@ public class Common {
         return Driver.getDriver().findElement(locator);
     }
 
-
     public static void clicPersonIcon(By Locators) {
         getElement(Locators).click();
     }
@@ -48,11 +45,9 @@ public class Common {
         getElement(Locators).click();
     }
 
-
     public static void cickPrisijungti(By Locators) {
         getElement(Locators).click();
     }
-
 
     public static void clickOnElement(By Locators) {
         getElement(Locators).click();
@@ -66,10 +61,9 @@ public class Common {
 
     public static void sendKeysToElement(String keys, By locator) {
         getElement(locator).sendKeys(keys);
-
     }
 
-    public static String getElementText( By locator) {
+    public static String getElementText(By locator) {
         return getElement(locator).getText();
     }
 }
